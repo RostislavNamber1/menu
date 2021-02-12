@@ -1,0 +1,238 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  rgb(233, 233, 233);
+}
+h1, h3{
+  font-size: 2rem;
+  width: 100%;
+  text-align: center;
+}
+h1 + h3{
+  margin-top: 2em;
+}
+/* Стиль кнопок, которые используются для открытия и закрытия панели аккордеона */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align:  center;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-size: 1.5rem;
+}
+
+/* Добавить цвет фона для кнопки, если она нажата (добавить .активный класс с JS), а при наведении на него курсора мыши (наведите курсор) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Стиль аккордеон панели. Примечание: скрыто по умолчанию */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+textarea{
+  width: 40vw;
+  height: 50vh;
+  resize: none;
+  overflow-y: scroll;
+  padding: 1em;
+}
+.gorizont{
+  display: flex;
+  justify-content: space-around;
+}
+
+
+/* первое меню */
+.nav1{
+  width: 100%;
+}
+.ul1{
+  display: flex; /*Выставляем в горизонталь меню*/
+  justify-content: center;
+}
+.li1{
+  list-style: none; /*убираем маркеры*/
+}
+.a1{
+  text-decoration: none;/*убираем подчеркивание в ссылках*/
+  border: 1.5px solid #0fad17;
+  padding: 10px;
+}
+.a1:hover{
+  background: rgb(7, 207, 218);
+  color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 4px 0px #000000;
+}
+.li1 + .li1{
+  margin-left: 1%;
+}
+/* первое меню */
+/* вторая менюшка */
+.nav {
+ position: relative;
+ margin: 20px 0;
+}
+.nav ul {
+ margin: 0;
+ padding: 0;
+ left: auto;
+ right: 0;
+}
+.nav li {
+ margin: 0 5px 10px 0;
+ padding: 0;
+ list-style: none;
+ display: inline-block;
+}
+.nav a {
+ padding: 3px 12px;
+ text-decoration: none;
+ color: #999;
+ line-height: 100%;
+}
+.nav a:hover {
+ color: #000;
+}
+.nav .current a {
+ background: #999;
+ color: #fff;
+ border-radius: 5px;
+}
+
+
+@media screen and (max-width: 600px) {
+ .nav {
+  position: relative;
+  min-height: 40px;
+ }
+ .nav ul {
+  width: 180px;
+  padding: 5px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: solid 1px #aaa;
+  background: #fff url(images/icon-menu.png) no-repeat 10px 11px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.3);
+ }
+ .nav li {
+  display: none; /* скройте все элементы &lt;li&gt; */
+  margin: 0;
+ }
+ .nav .current {
+  display: block; /* показывайте только текущий элемент &lt;li&gt; */
+ }
+ .nav a {
+  display: block;
+  padding: 5px 5px 5px 32px;
+  text-align: left;
+ }
+ .nav .current a {
+  background: none;
+  color: #666;
+ }
+
+ /* при проведении мышью */
+ .nav ul:hover {
+  background-image: none;
+ }
+ .nav ul:hover li {
+  display: block;
+  margin: 0 0 5px;
+ }
+ .nav ul:hover .current {
+  background: url(images/icon-check.png) no-repeat 10px 7px;
+ }
+
+ /* по правой стороне */
+ .nav.right ul {
+  left: auto;
+  right: 0;
+ }
+
+ /*по центру */
+ .nav.center ul {
+  left: 50%;
+  margin-left: -90px;
+ }
+
+}
+
+@media screen and (max-width: 600px) {
+ .nav {
+ position: relative;
+ min-height: 40px;
+ }
+ .nav ul {
+ width: 180px;
+ padding: 5px 0;
+ position: absolute;
+ top: 0;
+ left: 0;
+ border: solid 1px #aaa;
+ background: #fff url(images/icon-menu.png) no-repeat 10px 11px;
+ border-radius: 5px;
+ box-shadow: 0 1px 2px rgba(0,0,0,.3);
+ }
+ .nav li {
+ display: none; /* скройте все элементы &lt;li&gt; */
+ margin: 0;
+ }
+ .nav .current {
+ display: block; /* показывайте только текущий элемент &lt;li&gt; */
+ }
+ .nav a {
+ display: block;
+ padding: 5px 5px 5px 32px;
+ text-align: left;
+ }
+ .nav .current a {
+ background: none;
+ color: #666;
+ }
+
+ /* при проведении мышью */
+ .nav ul:hover {
+ background-image: none;
+ }
+ .nav ul:hover li {
+ display: block;
+ margin: 0 0 5px;
+ }
+ .nav ul:hover .current {
+ background: url(images/icon-check.png) no-repeat 10px 7px;
+ }
+
+ /* по правой стороне */
+ .nav.right ul {
+ left: auto;
+ right: 0;
+
+ }
+
+ /*по центру */
+ .nav.center ul {
+ left: 50%;
+ margin-left: -90px;
+ }
+
+}
+/* вторая менюшка */
+
+
+/* третье менюшка */
+
+
+/* третье менюшка */

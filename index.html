@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- для адаптива страниц -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- автор -->
+    <meta name="author" content="Дащенко Ростислав Русланович">
+    <!-- описание сайта -->
+    <meta name="description" content="описане сайта">
+    <!-- ключи для страницы -->
+    <meta name="keywords" content="ключи для страниц">
+    <!-- для индексации поскового робота -->
+    <meta name="robots" content="index, follow">
+    <!-- подключение стилей -->
+    <link rel="stylesheet" href="css.css">
+    <!-- Скрипт будет выполнен асинхронно с HTML страницей -->
+    <script async src="js.js"></script>
+    <title>Менюшки</title>
+  </head>
+  <body>
+    <h1>Менюшки</h1>
+    <!-- первая меню -->
+    <h3>Первая HTML CSS</h3>
+    <br>
+    <nav class="nav1">
+      <ul class="ul1">
+        <li class="li1"><a href="#" class="a1">Главная</a></li>
+        <li class="li1"><a href="#" class="a1">Главная</a></li>
+        <li class="li1"><a href="#" class="a1">Главная</a></li>
+        <li class="li1"><a href="#" class="a1">Главная</a></li>
+        <li class="li1"><a href="#" class="a1">Главная</a></li>
+      </ul>
+    </nav>
+    <br>
+    <button class="accordion">Код первой меню</button>
+      <div class="panel">
+        <div class="gorizont">
+
+
+        <div><p>HTML</p>
+          <textarea disabled>
+<nav>
+<ul>
+  <li><a href="#">Главная</a></li>
+  <li><a href="#">Главная</a></li>
+  <li><a href="#">Главная</a></li>
+  <li><a href="#">Главная</a></li>
+  <li><a href="#">Главная</a></li>
+</ul>
+</nav>
+        </textarea>
+        </div>
+        <div><p>CSS</p>
+          <textarea disabled>
+nav{
+  width: 100%;
+}
+ul{
+  display: flex; /*Выставляем в горизонталь меню*/
+  justify-content: center;
+}
+li{
+  list-style: none; /*убираем маркеры*/
+}
+a{
+  text-decoration: none;/*убираем подчеркивание в ссылках*/
+  border: 1.5px solid #0fad17;
+  padding: 10px;
+}
+a:hover{
+  background: rgb(7, 207, 218);
+  color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 4px 0px #000000;
+}
+li + .li{
+  margin-left: 1%;
+}
+          </textarea>
+        </div>
+    </div>
+    </div>
+<!-- первая меню -->
+    <!-- вторая меню -->
+      <h3>Вторая менюшка (Адаптивная выпад.)</h3>
+<br>
+
+<nav class="nav">
+<ul>
+<li class="current"><a href="#">Portfolio</a></li>
+<li><a href="#">Illustration</a></li>
+<li><a href="#">Web Design</a></li>
+<li><a href="#">Print Media</a></li>
+<li><a href="#">Graphic Design</a></li>
+</ul>
+</nav>
+<br>
+<button class="accordion">Код второй меню</button>
+  <div class="panel">
+    <div class="gorizont">
+
+
+    <div><p>HTML</p>
+      <textarea disabled>
+<nav class="nav">
+  <ul>
+    <li class="current"><a href="#">Portfolio</a></li>
+    <li><a href="#">Illustration</a></li>
+    <li><a href="#">Web Design</a></li>
+    <li><a href="#">Print Media</a></li>
+    <li><a href="#">Graphic Design</a></li>
+  </ul>
+</nav>
+    </textarea>
+    </div>
+    <div><p>CSS</p>
+      <textarea disabled>
+.nav {
+ position: relative;
+ margin: 20px 0;
+}
+.nav ul {
+ margin: 0;
+ padding: 0;
+}
+.nav li {
+ margin: 0 5px 10px 0;
+ padding: 0;
+ list-style: none;
+ display: inline-block;
+}
+.nav a {
+ padding: 3px 12px;
+ text-decoration: none;
+ color: #999;
+ line-height: 100%;
+}
+.nav a:hover {
+ color: #000;
+}
+.nav .current a {
+ background: #999;
+ color: #fff;
+ border-radius: 5px;
+}
+
+
+@media screen and (max-width: 600px) {
+ .nav {
+  position: relative;
+  min-height: 40px;
+ }
+ .nav ul {
+  width: 180px;
+  padding: 5px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: solid 1px #aaa;
+  background: #fff url(images/icon-menu.png) no-repeat 10px 11px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.3);
+ }
+ .nav li {
+  display: none; /* скройте все элементы &lt;li&gt; */
+  margin: 0;
+ }
+ .nav .current {
+  display: block; /* показывайте только текущий элемент &lt;li&gt; */
+ }
+ .nav a {
+  display: block;
+  padding: 5px 5px 5px 32px;
+  text-align: left;
+ }
+ .nav .current a {
+  background: none;
+  color: #666;
+ }
+
+ /* при проведении мышью */
+ .nav ul:hover {
+  background-image: none;
+ }
+ .nav ul:hover li {
+  display: block;
+  margin: 0 0 5px;
+ }
+ .nav ul:hover .current {
+  background: url(images/icon-check.png) no-repeat 10px 7px;
+ }
+
+ /* по правой стороне */
+ .nav.right ul {
+  left: auto;
+  right: 0;
+ }
+
+ /*по центру */
+ .nav.center ul {
+  left: 50%;
+  margin-left: -90px;
+ }
+
+}
+
+@media screen and (max-width: 600px) {
+ .nav {
+ position: relative;
+ min-height: 40px;
+ }
+ .nav ul {
+ width: 180px;
+ padding: 5px 0;
+ position: absolute;
+ top: 0;
+ left: 0;
+ border: solid 1px #aaa;
+ background: #fff url(images/icon-menu.png) no-repeat 10px 11px;
+ border-radius: 5px;
+ box-shadow: 0 1px 2px rgba(0,0,0,.3);
+ }
+ .nav li {
+ display: none; /* скройте все элементы &lt;li&gt; */
+ margin: 0;
+ }
+ .nav .current {
+ display: block; /* показывайте только текущий элемент &lt;li&gt; */
+ }
+ .nav a {
+ display: block;
+ padding: 5px 5px 5px 32px;
+ text-align: left;
+ }
+ .nav .current a {
+ background: none;
+ color: #666;
+ }
+
+ /* при проведении мышью */
+ .nav ul:hover {
+ background-image: none;
+ }
+ .nav ul:hover li {
+ display: block;
+ margin: 0 0 5px;
+ }
+ .nav ul:hover .current {
+ background: url(images/icon-check.png) no-repeat 10px 7px;
+ }
+
+ /* по правой стороне */
+ .nav.right ul {
+ left: auto;
+ right: 0;
+ }
+
+ /*по центру */
+ .nav.center ul {
+ left: 50%;
+ margin-left: -90px;
+ }
+
+}
+      </textarea>
+    </div>
+</div>
+</div>
+    <!-- вторая меню -->
+
+    <!-- третье меню -->
+
+        <!-- третье меню -->
+  </body>
+</html>
